@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<style>
+        /* update the styling to make it your own */
+        body {
+            background: #373e47;
+            color: #FFFFFF;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px 20px;
+            height: 2000px;
+        }
+		</style>
+		
+</head>
+<body>
+	<h1 align="center">Xueqi Song</h1>
+  	<div id="title"></div>
+    <div id="content"></div>
+
+<script type="text/babel">
+
+const EXAMPLE = () => { return <h1>Modeling</h1> }
+const EXAMPLEImg = [
+ "images/picture.jpg",
+ "images/picture2.jpg",
+];
+
+ReactDOM.render(
+	<EXAMPLE />,
+	document.getElementById("title")
+);
+
+const App = ({imgs}) => (
+		<div>
+			{imgs.map((EXAMPLE, i) =>
+				<div className="slide" key={i}><img src={EXAMPLE} /></div>
+		)}
+		</div>
+)
+
+ReactDOM.render(
+	<App imgs={EXAMPLEImg}/>,
+	document.getElementById("content")
+);
+</script>
+        
+</body>
+</html>
